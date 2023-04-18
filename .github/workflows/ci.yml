@@ -20,6 +20,4 @@ jobs:
           node-version: 18.x
           cache: "yarn"
       - run: yarn install --immutable --immutable-cache --check-cache
-      - run: yarn test
-      - if: ${{ failure() }}
-        run: echo "Jest tests failed. Changes were not pushed." && exit 1
+      - run: yarn test --bail
