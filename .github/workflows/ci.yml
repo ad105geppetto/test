@@ -25,7 +25,3 @@ jobs:
 
       - name: Run Jest tests
         run: yarn test
-
-      - name: Stop runner if tests fail
-        if: ${{ failure() }}
-        run: exit 1
