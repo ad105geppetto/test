@@ -20,4 +20,4 @@ jobs:
           node-version: 18.x
           cache: "yarn"
       - run: yarn install --immutable --immutable-cache --check-cache
-      - run: yarn run unit
+      - run: yarn test
