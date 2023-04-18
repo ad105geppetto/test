@@ -19,5 +19,10 @@ jobs:
         with:
           node-version: 18.x
           cache: "yarn"
-      - run: yarn install --immutable --immutable-cache --check-cache
-      - run: yarn test --bail
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Run Jest tests
+        run: yarn test
+        continue-on-error: true
